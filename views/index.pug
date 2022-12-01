@@ -1,0 +1,96 @@
+doctype html
+html(lang='en')
+  head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // Bootstrap CSS
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous')
+    link(rel='stylesheet' href='/index.css')
+    
+    title Welcome to Indigo Travels 
+  body
+    #success.alert.alert-warning.alert-dismissible.fade(role='alert')
+      strong form submitted Successfully!
+      |  Your travel request has ben Succesfully submitted
+      button.close(type='button' data-dismiss='alert' aria-label='Close')
+        span(aria-hidden='true') ×
+    #fail.alert.alert-danger.alert-dismissible.fade(role='alert')
+      strong form submission Unsuccessful!
+      |  There are some error of input valdiation,please correct the erros and try again
+      button.close(type='button' data-dismiss='alert' aria-label='Close')
+        span(aria-hidden='true') ×
+    .container
+      h1.my-4.mx-2 Welcome to Indigo Travels
+      h2.my-2.mx-1 Book your trip Now-
+      form(action='/' method='post')
+        .form-row
+          #namevalid.form-group.col-md-6
+            label(for='inputname') Name
+            input#inputname.form-control.fix-rounded-right(type='text' name='name' placeholder='Enter your name')
+            .invalid-feedback
+              | Please Enter a valid name.
+          .form-group.col-md-6
+            label(for='inputlastname') Last name
+            input#inputlastname.form-control.fix-rounded-right(type='text' name='lastname' placeholder='Enter your last name')
+            .invalid-feedback
+              | Please Enter a valid last name.
+        .form-row
+          .form-group.col-md-6
+            label(for='inputEmail4') Email
+            input#inputEmail4.form-control.fix-rounded-right(type='email' name='email' placeholder='exmaple34@gmail.com')
+            .invalid-feedback
+              | Please Enter a valid Email address.
+          .form-group.col-md-6
+            label(for='inputPassword4') Password
+            input#inputPassword4.form-control.fix-rounded-right(type='password' name='password' placeholder='***********')
+            input.my-2(type='checkbox' onclick='myFunction()')
+            |  Show Password
+            .invalid-feedback
+              | Password must contain a  captital letter and number!
+        .form-group
+          label(for='inputAddress') Address
+          input#inputAddress.form-control.fix-rounded-right(type='text' name='address'  placeholder='1234 Main St')
+        .form-row
+          .form-group.col-md-6
+            label(for='inputCity') Your City
+            input#inputCity.form-control.fix-rounded-right(type='text' name='city')
+          .form-group.col-md-3
+            label(for='inputState') Select your car
+            select#inputState.form-control.fix-rounded-right(name='car')
+              option(selected='')  Choose your car
+              option Aston Martin
+              option Maruti 800
+              option Shift desire
+              option Scorpio
+              option ford
+              option BMW
+              option Audi
+            .invalid-feedback
+              | Please select you car.
+          .form-group.col-md-3
+            label(for='inputZip') Phone Number
+            input#inputZip.form-control.fix-rounded-right(type='text' name='phone' placeholder='Enter your phone number')
+            .invalid-feedback
+              | Please Enter a valid phone number.
+            | `
+        .form-group
+          label(for='inputAddress2') Where you want to go?
+          input#inputAddress2.form-control.fix-rounded-right(type='text' name='destination' placeholder='kashmir,shimla,goa etc.')
+        .form-group
+          .form-check
+            input#gridCheck.form-check-input(type='checkbox' name='roundtrip')
+            label.form-check-label(for='gridCheck')
+              | select for round trip(Optional)
+        button#btn.btn.btn-primary.form-control(type='button' onclick = 'this.form.submit();' ) 
+          | Submit
+    hr(noshade='')
+    footer
+      h6 copyright ©mohit chaudhary,all rights reserved.
+    hr(noshade='')
+    // Optional JavaScript
+    // jQuery first, then Popper.js, then Bootstrap JS
+    script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js' integrity='sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI' crossorigin='anonymous')
+    script(src='/index.js')

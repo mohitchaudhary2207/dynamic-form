@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Welcome to Indigo Travels </title>
+</head>
+
+<body>
+     <div id="success" class="alert alert-warning alert-dismissible fade " role="alert">
+        <strong>form submitted Successfully!</strong> Your travel request has ben Succesfully submitted
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="fail" class="alert alert-danger alert-dismissible fade " role="alert">
+        <strong>form submission Unsuccessful!</strong> There are some error of input valdiation,please correct the erros and try again
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <div class="container">
+        <h1 class="my-4 mx-2">Welcome to Indigo Travels</h1>
+        <h2 class="my-2 mx-1">Book your trip Now-</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div id="namevalid" class="form-group col-md-6">
+                    <label for="inputname">Name</label>
+                    <input type="text" class="form-control fix-rounded-right" id="inputname" placeholder="Enter your name">
+                    <div class="invalid-feedback">
+                        Please Enter a valid name.
+                      </div>
+                </div>
+            
+                <div class="form-group col-md-6">
+                    <label for="inputlastname">Last name</label>
+                    <input type="text" class="form-control fix-rounded-right" id="inputlastname" placeholder="Enter your last name">
+                    <div class="invalid-feedback">
+                        Please Enter a valid last name.
+                      </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control fix-rounded-right" id="inputEmail4" placeholder="exmaple34@gmail.com">
+                    <div class="invalid-feedback">
+                     Please Enter a valid Email address.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control fix-rounded-right" id="inputPassword4"placeholder="***********">
+                    <input class="my-2"type="checkbox" onclick="myFunction()"> Show Password
+                    <div class="invalid-feedback">
+                        Password must contain a  captital letter and number!
+                      </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control fix-rounded-right" id="inputAddress" placeholder="1234 Main St">
+            </div>
+           
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Your City</label>
+                    <input type="text" class="form-control fix-rounded-right" id="inputCity">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputState">Select your car</label>
+                    <select id="inputState" class="form-control fix-rounded-right">
+                        <option selected> Choose your car</option>
+                        <option>Aston Martin</option>
+                        <option>Maruti 800</option>
+                        <option>Shift desire</option>
+                        <option>Scorpio</option>
+                        <option>ford</option>
+                        <option>BMW</option>
+                        <option>Audi</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select you car.
+                      </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputZip">Phone Number</label>
+                    <input type="text" class="form-control fix-rounded-right" id="inputZip" placeholder="Enter your phone number">
+                    <div class="invalid-feedback">
+                        Please Enter a valid phone number.
+                      </div>`
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress2">Where you want to go?</label>
+                <input type="text" class="form-control fix-rounded-right" id="inputAddress2" placeholder="kashmir,shimla,goa etc.">
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        select for round trip(Optional)
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" id="btn">
+                Submit</button>
+        </form>
+       
+    </div>
+    <hr noshade>
+    <footer>
+      <h6>copyright &copy;mohit chaudhary,all rights reserved.</h6>
+    </footer>
+    <hr noshade>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+</body>
+
+</html>
